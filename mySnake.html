@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Snake Game</title></head>
+<body>
+  <h1>Loading game...</h1>
+  <script>
+    function getCookie(name) {
+      return document.cookie.split('; ').find(row => row.startsWith(name + '='))?.split('=')[1];
+    }
+
+    const cookie = getCookie('ArXkIm');
+    
+    // Leak 
+	console.log(cookie)
+  </script>
+</body>
+</html>
